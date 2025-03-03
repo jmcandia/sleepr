@@ -7,11 +7,11 @@ steps:
     args:
       [
         "build",
-        "-t",
-        "us-east4-docker.pkg.dev/sleepr-452615/auth/production",
+        ".",
         "-f",
         "apps/auth/Dockerfile",
-        ".",
+        "-t",
+        "us-east4-docker.pkg.dev/sleepr-452615/auth/production",
       ]
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "us-east4-docker.pkg.dev/sleepr-452615/auth/production"]
@@ -20,11 +20,11 @@ steps:
     args:
       [
         "build",
-        "-t",
-        "us-east4-docker.pkg.dev/sleepr-452615/notifications/production",
+        ".",
         "-f",
         "apps/notifications/Dockerfile",
-        ".",
+        "-t",
+        "us-east4-docker.pkg.dev/sleepr-452615/notifications/production",
       ]
   - name: "gcr.io/cloud-builders/docker"
     args:
@@ -34,11 +34,11 @@ steps:
     args:
       [
         "build",
-        "-t",
-        "us-east4-docker.pkg.dev/sleepr-452615/payments/production",
+        ".",
         "-f",
         "apps/payments/Dockerfile",
-        ".",
+        "-t",
+        "us-east4-docker.pkg.dev/sleepr-452615/payments/production",
       ]
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "us-east4-docker.pkg.dev/sleepr-452615/payments/production"]
@@ -47,11 +47,11 @@ steps:
     args:
       [
         "build",
-        "-t",
-        "us-east4-docker.pkg.dev/sleepr-452615/notifications/production",
+        ".",
         "-f",
         "apps/notifications/Dockerfile",
-        ".",
+        "-t",
+        "us-east4-docker.pkg.dev/sleepr-452615/notifications/production",
       ]
   - name: "gcr.io/cloud-builders/docker"
     args:
